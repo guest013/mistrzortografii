@@ -3,6 +3,11 @@ from tkinter import Frame, Button, Label, PhotoImage
 from random import choice
 import webbrowser
 
+# nice font for application
+global global_font
+global_font = 'Verdana 12'
+
+
 def toplevel1():
     top=tk.Toplevel()
     top.geometry("600x300+300+250")
@@ -179,6 +184,8 @@ def toplevel2():
 
 root = tk.Tk()
 root.geometry("600x400+300+150")
+# applying font
+root.option_add('*Font', global_font)
 root.overrideredirect(1)
 
 tf = tk.Frame(root, height='100' ,width='600').pack(side='top')
